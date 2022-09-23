@@ -1,0 +1,9 @@
+version: '3'
+services:
+  sql:
+    image: mcr.microsoft.com/mssql/server
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Test1234"
+      ACCEPT_EULA: "Y"
