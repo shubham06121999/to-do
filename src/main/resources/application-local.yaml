@@ -2,11 +2,13 @@ spring:
   cloud:
     config:
       enabled: false
+
   datasource:
     url: jdbc:sqlserver://127.0.0.1:1433;databaseName=spartanapp;encrypt=true;trustServerCertificate=true;
     username: sa
     password: Test1234
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
   jpa:
     show-sql: true
     properties:
@@ -14,3 +16,9 @@ spring:
         ddl-auto: none
         format_sql: true
         dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+  flyway:
+    enabled: false
+    validate-on-migrate: false
+    baselineOnMigrate: true
+    outOfOrder: true
